@@ -1,72 +1,39 @@
 /*  your css code here. If applicable */
-body {
-  margin: 0;
-  padding: 0;
-}
-
-#grid {
+.grid-container {
   display: grid;
-  height: 100vh;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  gap: 5px;
+  /* Defining 4 equal columns and 5 rows */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto repeat(4, 100px); 
+  gap: 10px;
+  background-color: white;
   padding: 10px;
+  
+  /* Visual map of the layout */
+  grid-template-areas:
+    "a1 a1 a1 a1"
+    "a2 a3 a4 a4"
+    "a2 a5 a5 a6"
+    "a2 a7 a8 a9"
+    "a2 a10 a10 a10";
 }
 
-#grid > div {
+/* Styling for all items */
+.item {
   background-color: green;
   color: white;
+  padding: 10px;
   font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: sans-serif;
 }
 
-/* Layout positions */
-#grid > div:nth-child(1) {
-  grid-column: 1 / 4; /* spans all 3 columns */
-}
-
-#grid > div:nth-child(2) {
-  grid-row: 2 / 6; /* spans 4 rows down */
-  grid-column: 1 / 2;
-}
-
-#grid > div:nth-child(3) {
-  grid-row: 2 / 3;
-  grid-column: 2 / 3;
-}
-
-#grid > div:nth-child(4) {
-  grid-row: 2 / 3;
-  grid-column: 3 / 4;
-}
-
-#grid > div:nth-child(5) {
-  grid-row: 3 / 4;
-  grid-column: 2 / 3;
-}
-
-#grid > div:nth-child(6) {
-  grid-row: 3 / 4;
-  grid-column: 3 / 4;
-}
-
-#grid > div:nth-child(7) {
-  grid-row: 4 / 5;
-  grid-column: 2 / 3;
-}
-
-#grid > div:nth-child(8) {
-  grid-row: 4 / 5;
-  grid-column: 3 / 4;
-}
-
-#grid > div:nth-child(9) {
-  grid-row: 5 / 6;
-  grid-column: 2 / 3;
-}
-
-#grid > div:nth-child(10) {
-  grid-column: 1 / 4;
-}
+/* Assigning items to the grid areas */
+.item-1  { grid-area: a1; }
+.item-2  { grid-area: a2; }
+.item-3  { grid-area: a3; }
+.item-4  { grid-area: a4; }
+.item-5  { grid-area: a5; }
+.item-6  { grid-area: a6; }
+.item-7  { grid-area: a7; }
+.item-8  { grid-area: a8; }
+.item-9  { grid-area: a9; }
+.item-10 { grid-area: a10; }
