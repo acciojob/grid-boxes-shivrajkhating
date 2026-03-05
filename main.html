@@ -1,98 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Grid Layout</title>
-<style>
-    body{
-        margin:0;
-        padding:20px;
-        background:#f2f2f2;
-        font-family:Arial, sans-serif;
+  <title>Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
     }
 
-    .container{
-        display:grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 80px 120px 120px 120px 80px;
-        gap:5px;
-        background:white;
+    .container {
+      display: grid;
+      grid-template-columns: 250px 1fr 1fr 1fr;
+      grid-template-rows: 100px 150px 150px 150px 100px;
+      gap: 10px;
+      height: 100vh;
+      background: #eee;
+      padding: 10px;
     }
 
-    .box{
-        background:green;
-        color:white;
-        font-size:22px;
-        padding:10px;
+    .box {
+      background: green;
+      color: white;
+      font-size: 40px;
+      padding: 10px;
     }
 
-    /* Grid positioning */
+    /* Grid Positioning */
 
-    .box1{
-        grid-column:1 / 5;
+    .box1 {
+      grid-column: 1 / 5;
     }
 
-    .box2{
-        grid-row:2 / 6;
-        grid-column:1 / 2;
+    .box2 {
+      grid-row: 2 / 6;
+      grid-column: 1 / 2;
     }
 
-    .box3{
-        grid-column:2 / 3;
-        grid-row:2 / 3;
+    .box3 {
+      grid-column: 2 / 3;
     }
 
-    .box4{
-        grid-column:3 / 5;
-        grid-row:2 / 3;
+    .box4 {
+      grid-column: 3 / 5;
     }
 
-    .box5{
-        grid-column:2 / 4;
-        grid-row:3 / 4;
+    .box5 {
+      grid-column: 2 / 4;
     }
 
-    .box6{
-        grid-column:4 / 5;
-        grid-row:3 / 4;
+    .box6 {
+      grid-column: 4 / 5;
     }
 
-    .box7{
-        grid-column:2 / 3;
-        grid-row:4 / 5;
+    .box7 {
+      grid-column: 2 / 3;
     }
 
-    .box8{
-        grid-column:3 / 4;
-        grid-row:4 / 5;
+    .box8 {
+      grid-column: 3 / 4;
     }
 
-    .box9{
-        grid-column:4 / 5;
-        grid-row:4 / 5;
+    .box9 {
+      grid-column: 4 / 5;
     }
 
-    .box10{
-        grid-column:2 / 5;
-        grid-row:5 / 6;
+    .box10 {
+      grid-column: 2 / 5;
     }
 
-</style>
+  </style>
 </head>
 <body>
 
-<h2>Create the following layout using grid layout:</h2>
-
 <div class="container">
-    <div class="box box1">1</div>
-    <div class="box box2">2</div>
-    <div class="box box3">3</div>
-    <div class="box box4">4</div>
-    <div class="box box5">5</div>
-    <div class="box box6">6</div>
-    <div class="box box7">7</div>
-    <div class="box box8">8</div>
-    <div class="box box9">9</div>
-    <div class="box box10">10</div>
+  <div class="box box1">1</div>
+  <div class="box box2">2</div>
+  <div class="box box3">3</div>
+  <div class="box box4">4</div>
+  <div class="box box5">5</div>
+  <div class="box box6">6</div>
+  <div class="box box7">7</div>
+  <div class="box box8">8</div>
+  <div class="box box9">9</div>
+  <div class="box box10">10</div>
 </div>
 
 </body>
